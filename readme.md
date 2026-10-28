@@ -1,0 +1,16 @@
+# airport 
+## choose at least two datasets with relevant data points on topics of interest , describe each dataset in a short paragraph, explaining their significance and how they relate to each other.
+I chose a regional airports dataset, downloaded from POI factory, and formated as a JSON object(I used R to do this, rather than the excel formulas shown in lecture).  This data set shows non-towered smaller airports.  My wife is a pilot, so I thought this might be interesting to her.  The attributes in this layer do not leave a lot to work with for applying custom symbologies, I wanted to see if I could apply an aggregation effect, but I started out with leaflet, and did not quite have time to implement, and find if that is even supported.  It is unkown if this particular layer is comprehensive of these types of airports.
+
+The second layer I chose came from the FAA data portal, I copied the JSON URL into my java script, and referenced the STATUS field is in order to drive symbology. This Field contained the Values, RESTRICTED, IFR, CLOSED, and DECOMM.  These points are representive of old aviation infrastructure, that sends out radio messages that aid in navigation, before improved systems were implemented by the FAA.  These systems are still used today.  I wanted to show the airports and there relation to these features.
+https://ais-faa.opendata.arcgis.com/datasets/navaid-system/about
+## Create JSON objects based on your chosen datasets. 
+
+## Place markers on the map using the data from your JSON objects. Each marker should correspond to a data point from your datasets. For each marker, create a popup that displays the location name and other data fields from the JSON object.
+
+## Perform analyses or visualizations using both datasets, choose the analysis methods that best suite your datasets and clearly explain your approach and findings in a short paragraph.
+There is not a lot of analysis going on here.  However, I did want to show the relation between the regional airports, and the NAVAID systems.  I also wanted to display rather the NAVAID location is still functioning. I tried to de-emphasize points that were decommissioned, While showing restricted locations as still functional and closed areas as red.  I did not quite have enough time to implement a legend, which would be a usefull feature for this type of map.  Lastly I used and airplane Icon to show the airports throughout the area.  It is apparent that both the regional airports, and the VOR's tend to be close together, and also in less densly populated areas.
+
+## Add layer controls that allows users to toggle between several layers, and switch between different tile layers (e.g., satellite view, street view)
+I loaded the code to switch basemaps from here: https://github.com/Urban96/L.basemapControl/blob/master/README.md
+after implementing this I found a leaflet tutorial covering toggling several different tile layers, I tried implementing both methods, but eventually just followed the example from leaflets documentation.  While working on this, I did have some problems getting the linked rest JSON to show up in the map, later I found out that I was missing the J query line in the html doc
