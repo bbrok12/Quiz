@@ -1,4 +1,4 @@
-# airport 
+# Regional Airports Compared to VOR towers.
 ## choose at least two datasets with relevant data points on topics of interest , describe each dataset in a short paragraph, explaining their significance and how they relate to each other.
 I chose a regional airports dataset, downloaded from POI factory, and formated as a JSON object(I used R to do this, rather than the excel formulas shown in lecture).  This data set shows non-towered smaller airports.  My wife is a pilot, so I thought this might be interesting to her.  The attributes in this layer do not leave a lot to work with for applying custom symbologies, I wanted to see if I could apply an aggregation effect, but I started out with leaflet, and did not quite have time to implement, and find if that is even supported.  It is unkown if this particular layer is comprehensive of these types of airports.
 
